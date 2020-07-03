@@ -1,0 +1,12 @@
+
+Using log packgae, we can change de destination of logs using log.SetOutPut() 
+
+log.Fatal => no recovery from error. Does not run deferred functions.
+log.Panic => can recovery from error, using recover() function. Does run deferred functions
+
+defer keyword => postpones the execution of a function till the surrounding functions returns,
+either normally or through a panic
+
+
+function panic() (it is not the same as log.Panic !!!) :
+this function is called when the system has issues.
