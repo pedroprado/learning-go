@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
@@ -14,9 +15,11 @@ func main() {
 	file := normalErr()
 	defer file.Close()
 
+	//does not print defered function
 	// file := fatalErr()
 	// defer file.Close()
 
+	//print defered function
 	// file := panicErr()
 	// defer file.Close()
 
@@ -31,6 +34,7 @@ func normalErr() *os.File {
 }
 
 func fatalErr() *os.File {
+	defer printDefered()
 	file, err := os.Open("no-file.txt")
 	if err != nil {
 		log.Fatalln("Fatal: ", err)
@@ -39,6 +43,7 @@ func fatalErr() *os.File {
 }
 
 func panicErr() *os.File {
+	defer printDefered()
 	file, err := os.Open("no-file.txt")
 	if err != nil {
 		log.Panicln("Panic: ", err)
@@ -53,4 +58,8 @@ func openLogFile() *os.File {
 		log.Println("Error: ", err)
 	}
 	return logs
+}
+
+func printDefered() {
+	fmt.Println("Printed defered")
 }
