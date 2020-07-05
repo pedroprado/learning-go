@@ -1,0 +1,11 @@
+Concrete Types x Interface Types
+
+Concrete = map, struct, int, string, etc. We can create a value out of these Types
+Interface = we can not create a value out of this type
+
+
+Interfaces are not GENERIC Types
+Interfaces are implicit = we dont say explicitly that "englishBot" is of type "bot" 
+                                        (like using "implements" keyword in Java)
+Interfaces are CONTRACTS that helps with TYPES (not with logical implementation!)
+Interfaces are tough: step 1 is to understand how to read them!
