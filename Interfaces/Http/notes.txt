@@ -1,0 +1,19 @@
+
+Response of a Http Request
+
+-Response is a Struct that has a field Body
+-Body is a interface: ReadCloser Interface
+-ReadCloser interface has two interfaces : Read an Closer
+-Those interfaces tells how to read the data fetched from the server
+-Read Interface receives a []byte, in which it writes the fetched response data
+
+Reader x Write interfaces
+
+Reader: takes a []byte and read and incoming value (of any type) to the slice
+Writer: takes a []byte and write all the values in it to an output
+
+io.Copy(Writer, Reader) => it takes something that implements the Reader Interface and sends
+the data read to something that implements the Writer Interface
+
+Reader: Reads information from an outside data source into our application
+Writer: Writes information to an outside data source (out of our application)
