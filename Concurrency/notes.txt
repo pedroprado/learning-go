@@ -1,0 +1,35 @@
+CONCURRENCY
+- Concurrency is a Desing Pattern that allows we to WRITE CODE that CAN (but do not 
+necessarily will) be executed in parallel
+
+GOROUTINES
+-Our Go compiled program is executed in One Go routine (Main routine) : line by line
+
+-Goroutines is like a "litle engine that starts execution of chunks of code"
+
+-Go scheduler: works with one CPU. The Scheduler runs a Goroutine till it FINISHES or 
+-it is BLOCKED. When a Goroutine is blocked, the Scheduler changes to another free routine.
+
+-If we have ONLY ONE CPU, the Goroutine are not executed at the same time!
+
+-If we have MORE THAN ONE CPU (Core), we can set the Scheduler to run multiple Goroutines 
+-in multiple CPUs at the same time (parallelism)!
+
+
+CONCURRENCY IS NOT PARALLELISM
+-Our Program is Concurrent if: it has the ability to run multiple threads of code. If on thread
+-blocks, another one is picked and worked on
+
+-Our Program is Parallel if: multiple threads executing in multiple CPU cores
+
+
+MAIN ROUTINE AND CHILD ROUTINES
+-Main routine is started by the Main Function
+-Each Goroutine created inside the Main Routine is a Child Routine
+-For the Main Routine not finish before the Children Routines do their things,
+-the Main Routine needs create some kind of communication with the Children Routines: Channels
+
+CHANNELS
+-The only way to communicate between Routines
+
+
