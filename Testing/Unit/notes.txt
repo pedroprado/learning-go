@@ -1,0 +1,9 @@
+Unit Testing
+
+-Tests should be fast ( miliseconds)
+-Each test should cover independent modules: if some testing modules has dependency,
+ this dependency should be mocked
+-Tests should cover every possible outcome (test cases)
+-Each outcome should be a test: ONE ASSERTION PER TEST CASE SHOULD BE THE IDEAL!
+
+Spies x Mocks

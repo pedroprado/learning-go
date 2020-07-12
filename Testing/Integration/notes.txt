@@ -1,0 +1,6 @@
+Integration Test
+
+These are tests that verify integration among modules of the application.
+Integration might be among: 
+-Functions or methods (of the same layer)
+-Layers (services, controllers, etc)
