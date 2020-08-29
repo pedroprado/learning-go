@@ -1,0 +1,5 @@
+Reference Types: Slices, Maps and Channels
+
+They are variables that store MEMORY ADDRESS
+They don't store the actual values
+Instead, they store A REFERENCE to a position of memory where the actual value is stored
